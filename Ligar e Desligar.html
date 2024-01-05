@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ligar e Desligar</title>
+    <link rel="stylesheet" href="estilo_liga_desliga.css">
+</head>
+
+<body>
+
+    <button id="clicarBotao">Mudar Cor de Fundo</button>
+    <img id="luz" src="https://i.stack.imgur.com/ybxlO.jpg" onclick="trocarLampada()">
+
+    <script>
+
+    // Funçao trocar Cor de Fundo
+
+        function trocarFundo() {
+           
+            const coresDisponiveis = ["#FF0000", "#0000ff"];
+            const trocarCor = coresDisponiveis[Math.floor(Math.random() * coresDisponiveis.length)];
+            document.body.style.backgroundColor = trocarCor;
+        }
+
+        const clicarBotao = document.getElementById("clicarBotao");
+        clicarBotao.addEventListener("click", trocarFundo);  
+
+    // Funçao Lampada
+
+        let lampadaLigada = true; 
+
+        function trocarLampada() {
+            const luz = document.getElementById("luz");
+
+            if (lampadaLigada) {
+                luz.src = "https://i.stack.imgur.com/b983w.jpg"; 
+            } else {
+                luz.src = "https://i.stack.imgur.com/ybxlO.jpg"; 
+            }
+
+            lampadaLigada = !lampadaLigada; 
+        }
+    </script>
+  
+ </body>
+</html>

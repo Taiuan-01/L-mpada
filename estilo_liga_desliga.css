@@ -1,0 +1,15 @@
+body{
+    background-color: red;
+}
+#clicarBotao{
+    top: 230px;
+    left: 28px;
+    position: absolute;
+}
+#luz{
+    top: 15px;
+    left: 15px;
+    position: relative;
+    width: 150px;
+    cursor: pointer;
+}
